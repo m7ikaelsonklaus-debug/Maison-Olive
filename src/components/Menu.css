@@ -1,0 +1,137 @@
+.menu-header-area {
+  margin-bottom: 25px;
+}
+
+.page-title {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #3d4a30;
+  margin: 0 0 5px 0;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #7A846E;
+  margin: 0 0 20px 0;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* Rounded Pill Category Button Styling */
+.filter-tab-btn {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E4DA;
+  padding: 8px 24px;
+  border-radius: 20px;
+  color: #3d4a30;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-tab-btn:hover {
+  border-color: #4B5A3A;
+  background-color: #F8F6EF;
+}
+
+.filter-tab-btn.active {
+  background-color: #4B5A3A;
+  color: #F7F5EF;
+  border-color: #4B5A3A;
+}
+
+/* Single Filtered Card Display */
+.single-category-container {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.menu-card-column {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E4DA;
+  border-radius: 12px;
+  padding: 25px 30px;
+}
+
+.category-title {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: #9B7B38;
+  margin: 0 0 20px 0;
+}
+
+.menu-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  gap: 15px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  color: #2C3522;
+  margin-bottom: 3px;
+}
+
+.item-desc {
+  display: block;
+  font-size: 13px;
+  color: #7A846E;
+}
+
+.item-action-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item-price {
+  font-weight: 600;
+  font-size: 15px;
+  color: #9B7B38;
+  white-space: nowrap;
+}
+
+/* "Choisir" Button Style */
+.btn-choisir {
+  background-color: transparent;
+  border: 1px solid #4B5A3A;
+  color: #4B5A3A;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-choisir:hover {
+  background-color: #4B5A3A;
+  color: #F7F5EF;
+}
+
+.btn-choisir.selected {
+  background-color: #4B5A3A;
+  color: #F7F5EF;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #E8E4DA;
+  margin: 0;
+}

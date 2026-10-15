@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Bouton Mode Nuit dans Navbar */
+.dark-mode-toggle-btn {
+  background-color: transparent;
+  border: 1px solid #E8E4DA;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark-mode-toggle-btn:hover {
+  background-color: rgba(180, 10, 236, 0.15);
+}
+
+/* ==========================================
+   VARIABLES ET STYLES DU MODE NUIT (DARK MODE)
+   ========================================== */
+
+.app-root.dark-theme {
+  background-color: #1a1d17;
+  color: #e2e8d8;
+  min-height: 100vh;
+}
+
+/* Arrière-plan des pages en mode nuit */
+.dark-theme .page-wrapper {
+  background-color: #1a1d17;
+}
+
+/* Titres & Textes en Mode Nuit */
+.dark-theme .brand-logo-text,
+.dark-theme .page-title,
+.dark-theme .section-heading,
+.dark-theme .res-card-title,
+.dark-theme .nav-btn,
+.dark-theme .item-name {
+  color: #f0f4ea;
+}
+
+.dark-theme .page-subtitle,
+.dark-theme .item-desc,
+.dark-theme .contact-info,
+.dark-theme .feature-box p {
+  color: #a8b29e;
+}
+
+/* Cartes & Conteneurs en Mode Nuit */
+.dark-theme .feature-box,
+.dark-theme .incontournables-card,
+.dark-theme .menu-card-column,
+.dark-theme .res-card {
+  background-color: #242920;
+  border-color: #353c2e;
+}
+
+.dark-theme .divider {
+  border-top-color: #353c2e;
+}
+
+/* Boutons de Filtre & Formulaires en Mode Nuit */
+.dark-theme .filter-tab-btn,
+.dark-theme .btn-choisir,
+.dark-theme .dark-mode-toggle-btn {
+  background-color: #242920;
+  border-color: #353c2e;
+  color: #e2e8d8;
+}
+
+.dark-theme .filter-tab-btn.active,
+.dark-theme .btn-choisir.selected {
+  background-color: #5d6f49;
+  border-color: #5d6f49;
+  color: #ffffff;
+}
+
+.dark-theme .form-group input {
+  background-color: #1a1d17;
+  border-color: #353c2e;
+  color: #f0f4ea;
+}
+
+.dark-theme .form-group input:focus {
+  border-color: #5d6f49;
 }

@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Accueil from './components/Accueil';
+import Menu from './components/Menu';
+import Reserver from './components/Reserver';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('accueil');
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {currentPage === 'accueil' && (
+        <Accueil 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+      )}
+      {currentPage === 'menu' && (
+        <Menu 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+      )}
+      {currentPage === 'reserver' && (
+        <Reserver 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+      )}
     </div>
   );
 }
